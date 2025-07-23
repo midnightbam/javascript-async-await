@@ -33,3 +33,14 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
+getJohnProfile()
+  .then((profile) => {
+    console.log(profile); // แสดงข้อมูลโปรไฟล์
+    return getJohnOrders(); // ส่งต่อไปเรียก order
+  })
+  .then((orders) => {
+    console.log(orders); // แสดงข้อมูล order
+  })
+  .catch((err) => {
+    console.log("เกิดข้อผิดพลาด:", err);
+  });
