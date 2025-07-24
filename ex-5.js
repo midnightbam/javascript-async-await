@@ -12,3 +12,13 @@ let getJohnProfile = () => {
   });
 };
 // Start coding here
+async function asyncchronos() {
+  try {
+  const displayJonhProfile = await getJohnProfile ();
+  console.log(displayJonhProfile);
+}
+  catch (error) {
+  console.log('👿 Failed to request data from server');
+  }
+}
+asyncchronos();
